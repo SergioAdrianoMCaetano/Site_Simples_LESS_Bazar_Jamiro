@@ -12,7 +12,7 @@
     </head>
     <body>
         <header class="site-header">
-            <img class="profile-avatar" src="https://via.placeholder.com/96x96" />
+            <img class="profile-avatar" src="src/images/bazar01.jpg" />
             <h1 class="site-title">Projeto Bazar Lago Sul</h1>
 
             <nav class="site-nav">
@@ -22,27 +22,70 @@
                     <li><a href="#novidades"><i class="fas fa-star"></i> Novidades</a></li>
                     <li><a href="#bazar"><i class="fas fa-tags"></i> Bazar</a></li>
 
-                    <li><a href="#vestidos"><i class="fa-solid fa-person-dress"></i>Vestidos</a></li>
-                    <li><a href="#acessorios"><i class="fa-solid fa-bag-shopping"></i>Acessórios</a></li>
-                    <li><a href="#bemestar"><i class="fa-solid fa-spa"></i>Bem-Estar</a></li>
-                    <li><a href="#colecoes"><i class="fa-solid fa-boxes-stacked"></i>Coleções</a></li>
+                    <li><a href="#vestidos"><i class="fa-solid fa-person-dress"></i> Vestidos</a></li>
+                    <li><a href="#acessorios"><i class="fa-solid fa-bag-shopping"></i> Acessórios</a></li>
+                    <li><a href="#bemestar"><i class="fa-solid fa-spa"></i> Bem-Estar</a></li>
+                    <li><a href="#colecoes"><i class="fa-solid fa-boxes-stacked"></i> Coleções</a></li>
                 </ul>
             </nav>
         </header>
         <div class="container">
-            <h2 class="profile-bio-name">Engenheiro Front-End</h2>
-            <p class="profile-bio-description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nulla autem ex? Modi incidunt ducimus eum similique dignissimos recusandae nostrum tenetur quas, velit nesciunt ipsa suscipit iusto! Ad, consequatur dolores.
-            </p>
-            <nav>
-                <ul>
-                    <li><a href="Instagram"></a>Instagram</li>
-                    <li><a href="Whatsapp"></a>Whatsapp</li>
-                    <li><a href="TikTok"></a>TikTok</li>
-                    <li><a href="E-mail"></a>E-mail</li>
-                </ul>
-            </nav>
-        </div>
+            <!-- Seção principal: Sobre o Bazar -->
+            <main class="about-bazar">
+                <h1>Sobre o Bazar</h1>
+                <p>
+                O Bazar Esperança nasceu em 2025 com o propósito de transformar roupas, acessórios e itens doados em oportunidades reais para comunidades carentes. Desde então, temos promovido eventos mensais que unem solidariedade, moda consciente e impacto social. Cada peça vendida ajuda a financiar projetos educacionais e ações de inclusão. Venha fazer parte dessa corrente do bem!
+                </p>
+            </main>
+
+            <!-- Seção de Produtos -->
+            <section class="product-section">
+                <h2 class="section-title">Nossos Produtos</h2>
+                <div class="product-grid">
+                <div class="product-card">
+                    <img src="src/images/produto01.jpg" alt="Vestido Floral" />
+                    <h3 class="product-name">Vestido Floral</h3>
+                    <p class="product-price">R$ 129,90</p>
+                    <button class="product-button">Comprar</button>
+                </div>
+                <div class="product-card">
+                    <img src="src/images/produto02.jpg" alt="Bolsa Elegante" />
+                    <h3 class="product-name">Bolsa Elegante</h3>
+                    <p class="product-price">R$ 89,90</p>
+                    <button class="product-button">Comprar</button>
+                </div>
+                <div class="product-card">
+                    <img src="src/images/produto03.jpg" alt="Kit Bem-Estar" />
+                    <h3 class="product-name">Kit Bem-Estar</h3>
+                    <p class="product-price">R$ 59,90</p>
+                    <button class="product-button">Comprar</button>
+                </div>
+                <div class="product-card">
+                    <img src="src/images/produto04.jpg" alt="Kit Bem-Estar 2" />
+                    <h3 class="product-name">Kit Bem-Estar</h3>
+                    <p class="product-price">R$ 59,90</p>
+                    <button class="product-button">Comprar</button>
+                </div>
+                </div>
+            </section>
+
+            <!-- Seção de Cadastro -->
+            <section class="signup-section">
+                <h2>Cadastre-se para receber novidades</h2>
+                <form class="signup-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" placeholder="Seu nome" required />
+
+                <label for="telefone">Whatsapp:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" required />
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+
+                <button type="submit">Cadastrar</button>
+                </form>
+            </section>
+            </div>
 
         <footer class="site-footer">
             <div class="footer-content">
