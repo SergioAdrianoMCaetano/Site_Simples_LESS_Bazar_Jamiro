@@ -10,9 +10,22 @@
         <title>Projeto com LESS</title>
     </head>
     <body>
-        <header>
+        <header class="site-header">
             <img class="profile-avatar" src="https://via.placeholder.com/96x96" />
-            <h1 class="profile-title">Projeto Dinheiro na Conta</h1>
+            <h1 class="site-title">Projeto Bazar Lago Sul</h1>
+
+            <nav class="site-nav">
+                <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+                <ul class="nav-list">
+                    <li><a href="#sobre">Sobe Nós</a></li>
+                    <li><a href="#novidades">Novidades</a></li>
+                    <li><a href="#bazar">Bazar</a></li>
+                    <li><a href="#vestidos">Vestidos</a></li>
+                    <li><a href="#acessorios">Acessórios</a></li>
+                    <li><a href="#bemestar">Bem-Estar</a></li>
+                    <li><a href="#colecoes">Coleções</a></li>
+                </ul>
+            </nav>
         </header>
         <div class="container">
             <h2 class="profile-bio-name">Engenheiro Front-End</h2>
@@ -29,4 +42,13 @@
             </nav>
         </div>
     </body>
+
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.site-nav');
+
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
 </html>
