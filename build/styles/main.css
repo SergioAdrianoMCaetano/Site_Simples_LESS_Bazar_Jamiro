@@ -40,7 +40,7 @@ body {
   object-fit: cover;
 }
 .site-header .site-title {
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: 700;
   color: #ffa801;
   margin: 10px;
@@ -55,6 +55,10 @@ body {
   border: none;
   cursor: pointer;
   color: #eee;
+  transition: transform 0.3s ease;
+}
+.site-header .site-nav .menu-toggle:hover {
+  transform: scale(1.1);
 }
 .site-header .site-nav .nav-list {
   display: flex;
@@ -64,8 +68,12 @@ body {
 .site-header .site-nav .nav-list li a {
   cursor: pointer;
   text-decoration: line;
-  color: #eee;
+  color: #ffa801;
   font-weight: 500;
+  transition: color 0.3s ease;
+}
+.site-header .site-nav .nav-list li a:hover {
+  color: #eee;
 }
 @media (max-width: 767px) {
   .site-header {
