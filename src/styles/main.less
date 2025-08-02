@@ -11,6 +11,9 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: @corDeFundo;
 }
 
@@ -18,6 +21,7 @@ body {
     max-width: 960px;
     width: 100%;
     margin: 0 auto;
+    flex: 1;
 
     @media @breakpointMobile {
         max-width: 70%;
@@ -28,6 +32,7 @@ body {
     }
 }
 
+//HEADER
 .site-header {
     display: flex;
     flex-wrap: wrap;
@@ -126,11 +131,65 @@ body {
             li {
             padding: 10px 0;
             }
+
+            a {
+                text-decoration: none;
+                color: @corDeTextoPrimaria;
+                font-weight: 500;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: @corDeFundoSecundaria;
+                }
+            }
         }
 
         &.active .nav-list {
             display: flex;
         }
+        }
+    }
+}
+
+
+//FOOTER
+.site-footer {
+    background-color: @corDeFundoTerciaria;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 0.9rem;
+
+    .footer-content {
+        max-width: 800px;
+        margin: 0 auto;
+
+        p {
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: @corDeTextoSecundaria;
+        }
+
+        .footer-links {
+            list-style: none;
+            text-decoration: none;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: space-between;
+
+            li {
+                a {
+                text-decoration: none;
+                color: @corDosBotoes;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: @corDeTextoPrimaria
+                }
+            }
+            }
         }
     }
 }
