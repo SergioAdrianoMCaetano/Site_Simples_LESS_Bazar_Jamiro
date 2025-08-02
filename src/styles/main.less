@@ -1,0 +1,76 @@
+@import "variaveis.less";
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width:1023px)";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: @fontePrincipal;
+    color: @corDeTextoPrimaria;
+}
+
+body {
+    background-color: @corDeFundo;
+}
+
+header {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background-color: #000;
+
+    .profile-avatar {
+        justify-content: center;
+        position: absolute;
+        top:40px;
+        left: 20px;
+        width: 96px;
+        height: 96px;
+        align-items: flex-start;
+        border-radius: 50%;
+        border-bottom: 2px solid @corDosBotoes;
+        margin-right: 40px;
+        
+    }
+    
+    .profile-title {
+        font-size: 4rem;
+        font-weight: 700;
+        color: @corDeTextoPrimaria;
+        margin: 10px;
+        color: @corDeTextoSecundaria;
+    }
+
+    @media @breakpointMobile {
+        flex-direction: column;
+        text-align: center;
+
+        .profile-avatar {
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .profile-title {
+            font-size: 1.5rem;
+        }
+    }
+}
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media @breakpointMobile {
+        
+        max-width: 70%;
+
+    }
+
+    @media @breakpointTablet {
+        max-width: 80%;
+    }
+}
