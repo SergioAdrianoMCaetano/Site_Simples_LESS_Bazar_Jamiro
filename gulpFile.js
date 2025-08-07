@@ -5,6 +5,7 @@ const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync');
 const imagemin = require('gulp-imagemin');
+const uglify = require('gulp-uglify');
 
 //CAMINHOS
 const paths = {
@@ -15,6 +16,10 @@ const paths = {
     images: {
         src: 'src/images/**/*',
         dest: 'build/images'
+    },
+    scripts: {
+        src: 'src/scripts/main.js',
+        dest: 'build/scripts'
     }
 };
 
@@ -37,6 +42,14 @@ function images() {
         .pipe(gulp.dest(paths.images.dest));
 }
 
+//MINIFICAR JAVASCRIPT
+function scripts() {
+    return gulp.src(paths.scripts.src)
+        .pipe(uglify())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest(paths.scripts.dest));
+}
+
 //SERVIDOR LOCAL + LIVE RELOAD
 function serve() {
     browserSync.init({
@@ -53,6 +66,8 @@ function serve() {
 //TAREFAS
 exports.styles = styles;
 exports.images = images;
-exports.server = gulp.series(styles, images, serve);
-exports.default = gulp.series(styles, images);
+exports.scripts = scripts;
+
+exports.server = gulp.series(styles, images, scripts, serve);
+exports.default = gulp.series(styles, images, scripts);
 

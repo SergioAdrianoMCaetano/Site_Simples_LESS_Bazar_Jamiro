@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gulp serve",
+    "start": "gulp server",
     "build": "gulp",
     "less": "less-watch-compiler ./src/styles  ./build/styles main.less",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,6 +19,7 @@
     "gulp-less": "^5.0.0",
     "gulp-rename": "^2.1.0",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
     "less": "^4.4.0",
     "less-watch-compiler": "^1.16.3"
   }
