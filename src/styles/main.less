@@ -11,10 +11,10 @@
 }
 
 body {
+    background-color: @corDeFundo;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: @corDeFundo;
 }
 
 .container {
@@ -344,6 +344,35 @@ body {
         width: 45%;
         }
     }
+}
+
+//CARROSSEL
+.carousel-section {
+    img {
+        width: 200px;
+        height: 200px;
+        border-radius: 4px;
+        margin-bottom: 15px;
+        }
+    h2 {
+        color: @corDeTextoSecundaria !important;
+    }
+
+    .carousel-item img {
+        width: 200px;
+        height: 200px;
+        border-radius: 4px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        max-height: 500px;
+        object-fit: cover;
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 50%;
+    } 
 }
 
 //FORMULÁRIO
