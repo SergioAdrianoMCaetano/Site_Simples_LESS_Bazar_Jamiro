@@ -6,6 +6,10 @@ const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync');
 const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
+const noop = require('gulp-noop');
+
+//DETECTAR AMBIENTE
+const isProduction = process.env.NODE_ENV === 'production';
 
 //CAMINHOS
 const paths = {
@@ -26,11 +30,11 @@ const paths = {
 //COMPILAR LESS + MINIFICAR CSS
 function styles() {
     return gulp.src(paths.styles.src)
-        .pipe(sourcemaps.init())
+        .pipe(!isProduction ? sourcemaps.init() : noop())
         .pipe(less())
-        .pipe(cleanCSS())
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(sourcemaps.write('.'))
+        .pipe(isProduction ? cleanCSS() : noop())
+        .pipe(rename({ suffix: isProduction ? '.min' : '' }))
+        .pipe(isProduction ? sourcemaps.write('.') : noop())
         .pipe(gulp.dest(paths.styles.dest))
         .pipe(browserSync.stream());
 }
@@ -45,9 +49,10 @@ function images() {
 //MINIFICAR JAVASCRIPT
 function scripts() {
     return gulp.src(paths.scripts.src)
-        .pipe(uglify())
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest(paths.scripts.dest));
+        .pipe(isProduction ? uglify() : noop())
+        .pipe(rename({ suffix: isProduction ? '.min' : '' }))
+        .pipe(gulp.dest(paths.scripts.dest))
+        .pipe(browserSync.stream());
 }
 
 //SERVIDOR LOCAL + LIVE RELOAD
@@ -60,6 +65,7 @@ function serve() {
 
     gulp.watch('./*.html').on('change', browserSync.reload);
     gulp.watch(paths.styles.src, styles);
+    gulp.watch(paths.scripts.src, scripts);
     gulp.watch(paths.images.src, images);
 }
 

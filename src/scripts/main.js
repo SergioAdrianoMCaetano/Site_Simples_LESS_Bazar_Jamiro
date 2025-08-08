@@ -1,4 +1,4 @@
-// 🍔 Menu hamburguer
+//Menu hamburguer
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.site-nav');
 
@@ -8,7 +8,7 @@ if (toggle && nav) {
     });
     }
 
-    // 🛒 Botões de "Comprar"
+    //Botões de "Comprar"
     const buttons = document.querySelectorAll('.product-button');
 
     buttons.forEach(button => {
@@ -17,7 +17,7 @@ if (toggle && nav) {
     });
     });
 
-    // 📬 Validação do formulário
+    //Validação do formulário
     const form = document.querySelector('.signup-form');
 
     if (form) {

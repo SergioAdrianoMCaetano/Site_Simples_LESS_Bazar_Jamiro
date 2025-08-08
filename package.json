@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gulp server",
-    "build": "gulp",
+    "start": "cross-env NODE_ENV=development gulp server",
+    "build": "cross-env NODE_ENV=production gulp",
     "less": "less-watch-compiler ./src/styles  ./build/styles main.less",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,10 +13,12 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^3.0.4",
+    "cross-env": "^10.0.0",
     "gulp": "^5.0.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-less": "^5.0.0",
+    "gulp-noop": "^1.0.1",
     "gulp-rename": "^2.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
