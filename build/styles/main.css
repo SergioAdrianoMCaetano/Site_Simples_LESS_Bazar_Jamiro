@@ -5,10 +5,10 @@
   color: #eee;
 }
 body {
+  background-color: #1e272e;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #1e272e;
 }
 .container {
   max-width: 960px;
@@ -153,145 +153,31 @@ body {
 .about-bazar p {
   font-size: 1.1rem;
   line-height: 1.6;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 700px;
 }
-.product-section {
-  padding: 40px 20px;
-  background-color: #a4b0be;
-  text-align: center;
-}
-.product-section .section-title {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #ffa801;
-}
-.product-section .product-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-.product-section .product-card {
-  background-color: #000;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  padding: 20px;
-  width: 250px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-.product-section .product-card:hover {
-  transform: scale(1.03);
-}
-.product-section .product-card img {
+.carousel-section img {
   width: 100%;
+  height: auto;
   border-radius: 4px;
   margin-bottom: 15px;
 }
-.product-section .product-card .product-name {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #eee;
+.carousel-section h2 {
+  color: #ffa801 !important;
 }
-.product-section .product-card .product-price {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  color: #e1b12c;
-}
-.product-section .product-card .product-button {
-  background-color: #e1b12c;
-  color: #ffa801;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.product-section .product-card .product-button:hover {
-  background-color: #bf931b;
-}
-@media (max-width: 767px) {
-  .product-section .product-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-  .product-section .product-card {
-    width: 90%;
-  }
-}
-@media (min-width: 768px) and (max-width:1023px) {
-  .product-section .product-card {
-    width: 45%;
-  }
-}
-.product-section {
-  padding: 40px 20px;
-  background-color: #1e272e;
-  text-align: center;
-}
-.product-section .section-title {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #ffa801;
-}
-.product-section .product-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-.product-section .product-card {
-  background-color: #000;
-  border: 1px solid #eee;
+.carousel-section .carousel-item img {
+  width: 100% !important;
+  height: auto !important;
   border-radius: 8px;
-  padding: 20px;
-  width: 250px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-.product-section .product-card:hover {
-  transform: scale(1.03);
-}
-.product-section .product-card img {
-  width: 200px;
-  height: 200px;
-  border-radius: 4px;
   margin-bottom: 15px;
+  max-height: 500px;
+  object-fit: cover;
 }
-.product-section .product-card .product-name {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #eee;
-}
-.product-section .product-card .product-price {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  color: #e1b12c;
-}
-.product-section .product-card .product-button {
+.carousel-section .carousel-control-next-icon,
+.carousel-section .carousel-control-prev-icon {
   background-color: #e1b12c;
-  color: #000;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.product-section .product-card .product-button:hover {
-  background-color: #bf931b;
-}
-@media (max-width: 767px) {
-  .product-section .product-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-  .product-section .product-card {
-    width: 90%;
-  }
-}
-@media (min-width: 768px) and (max-width:1023px) {
-  .product-section .product-card {
-    width: 45%;
-  }
+  border-radius: 50%;
 }
 .signup-section {
   padding: 40px 20px;
@@ -374,7 +260,7 @@ body {
 .site-footer .footer-content .footer-links li a {
   text-decoration: none;
   color: #e1b12c;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 .site-footer .footer-content .footer-links li a:hover {
   color: #eee;

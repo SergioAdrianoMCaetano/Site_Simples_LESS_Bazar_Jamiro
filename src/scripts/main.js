@@ -17,6 +17,7 @@ if (toggle && nav) {
     });
     });
 
+
     //Validação do formulário
     const form = document.querySelector('.signup-form');
 
